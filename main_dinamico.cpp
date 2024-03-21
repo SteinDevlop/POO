@@ -1,3 +1,9 @@
+/*
+Alejandro Pedro Steinman Cuesta - T00077151.
+Andres Felipe Rubiano Marrugo - T00077084.
+Tarea 2.
+Programacion Orientada a Objetos-C04A-H-1361.
+*/
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
@@ -36,9 +42,9 @@ int main() {
     float sh=0;
     float prom_s=0,prom_m=0;
     Trabajador * vector = nullptr;
-    Trabajador *temp=nullptr;
+    Trabajador * temp = nullptr;
     while(true){
-        cout<<"Nombre: ";cin.ignore();getline(cin,na);
+        cout<<"Nombre (0 para cancelar el ciclo): ";cin.ignore();getline(cin,na);
         if (na =="0"){break;}
         cout<<"Edad: ";cin>>e;
         cout<<"Salario por hora: ";cin>>sh;
@@ -52,7 +58,6 @@ int main() {
         prom_m+=vector[n].calcularSalarioMensual();
         vector[n].imprimir_info();
         n++;
-
     }
     cout<<"---Promedios---"<<endl;
     cout<<"Promedio semanal: "<<fixed<<setprecision(2)<<prom_s/n<<endl;
